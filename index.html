@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Director's Cut | Classic Portfolio</title>
+  <meta name="description" content="A classic visual storytelling portfolio.">
+
+  <!-- Classic Typography: Cormorant Garamond for display, Lato for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Floating Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="Vasanthraju – Wonder and Wander" class="nav-logo">
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#photography">Photography</a>
+        <a href="#journal">Journal</a>
+      </div>
+      <button class="hamburger" id="hamburger-btn">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#photography" class="mobile-link">Photography</a>
+    <a href="#journal" class="mobile-link">Journal</a>
+  </div>
+
+  <main>
+    <!-- Hero Carousel -->
+    <header class="hero-carousel" id="hero-carousel">
+
+      <!-- Slides -->
+      <div class="hc-track" id="hc-track">
+        <div class="hc-slide active"><img src="green-head.jpg" alt="Madurai Guardian"></div>
+        <div class="hc-slide"><img src="sword-sickle.jpg" alt="Kodungallur Parani"></div>
+        <div class="hc-slide"><img src="mumbai-building.jpg" alt="Mumbai Nightscape"></div>
+        <div class="hc-slide"><img src="red-blurred-dancer.jpg" alt="Divine Motion"></div>
+        <div class="hc-slide"><img src="black-and-white-performer.jpg" alt="The Devotee"></div>
+        <div class="hc-slide"><img src="chariot-festival.jpg" alt="Kallazhagar Festival"></div>
+        <div class="hc-slide"><img src="man-by-fire.jpg" alt="Nelpettai Warmth"></div>
+      </div>
+
+      <!-- Gradient overlay -->
+      <div class="hc-overlay"></div>
+
+      <!-- Dot indicators -->
+      <div class="hc-dots" id="hc-dots">
+        <button class="hc-dot active" aria-label="Slide 1"></button>
+        <button class="hc-dot" aria-label="Slide 2"></button>
+        <button class="hc-dot" aria-label="Slide 3"></button>
+        <button class="hc-dot" aria-label="Slide 4"></button>
+        <button class="hc-dot" aria-label="Slide 5"></button>
+        <button class="hc-dot" aria-label="Slide 6"></button>
+        <button class="hc-dot" aria-label="Slide 7"></button>
+      </div>
+    </header>
+
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="about-inner reveal">
+        <div class="about-logo-wrap">
+          <img src="about.png" alt="Vasanthraju" class="about-logo">
+        </div>
+        <div class="about-text">
+          <h2 class="section-title">About</h2>
+          <p class="about-para">I am <strong>Vasanthraju</strong> — a visual storyteller drawn to the sacred, the street, and the quietly extraordinary. My work wanders across festivals, temples, and forgotten lanes, seeking the moments where tradition breathes and light tells the truth.</p>
+          <p class="about-para">Rooted in South India yet restless by nature, I document culture not as a spectator, but as a wanderer who believes every face holds a universe and every ritual deserves a witness.</p>
+          <p class="about-tagline">Wonder and Wander.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photography Section (Masonry Grid) -->
+    <section id="photography" class="section">
+      <div class="section-header reveal">
+        <span class="section-number">I.</span>
+        <h2 class="section-title">Photography</h2>
+      </div>
+
+      <div class="masonry">
+        <div class="item reveal flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="green-head.jpg" loading="lazy" alt="Madurai Deity">
+            </div>
+            <div class="flip-card-back">
+              <p>A vibrant folk deity sculpture from Madurai, embodying the fierce protective spirits of Tamil cultural
+                traditions.</p>
+            </div>
+          </div>
+          <p class="caption">Madurai Guardian</p>
+        </div>
+
+        <div class="item reveal flip-card" onclick="this.classList.toggle('flipped')" style="animation-delay: 0.2s;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="sword-sickle.jpg" loading="lazy" alt="Kodungallur sickle">
+            </div>
+            <div class="flip-card-back">
+              <p>The sacred sickle of Kodungallur Bharani, a symbol of divine energy, devotion, and ancient ritualistic
+                fervor.</p>
+            </div>
+          </div>
+          <p class="caption">Kodungallur Parani</p>
+        </div>
+
+        <div class="item reveal flip-card" onclick="this.classList.toggle('flipped')" style="animation-delay: 0.4s;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="mumbai-building.jpg" loading="lazy" alt="BMC Building Mumbai">
+            </div>
+            <div class="flip-card-back">
+              <p>The historic Brihanmumbai Municipal Corporation building glowing against the monsoon night sky,
+                capturing the eternal pulse of Mumbai.</p>
+            </div>
+          </div>
+          <p class="caption">Mumbai Nightscape, Sep 2025</p>
+        </div>
+
+        <div class="item reveal flip-card" onclick="this.classList.toggle('flipped')" style="animation-delay: 0.6s;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="red-blurred-dancer.jpg" loading="lazy" alt="Trance dancer">
+            </div>
+            <div class="flip-card-back">
+              <p>A kinetic portrayal of a trance dancer, where intense motion blur translates the raw, dizzying
+                spiritual energy of the performance.</p>
+            </div>
+          </div>
+          <p class="caption">Divine Motion</p>
+        </div>
+
+        <div class="item reveal flip-card" onclick="this.classList.toggle('flipped')" style="animation-delay: 0.8s;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="black-and-white-performer.jpg" loading="lazy" alt="Performer preparation">
+            </div>
+            <div class="flip-card-back">
+              <p>An intimate, high-contrast moment capturing the intense devotion and theatrical preparation of a
+                traditional folk performer.</p>
+            </div>
+          </div>
+          <p class="caption">The Devotee</p>
+        </div>
+
+        <div class="item reveal flip-card" onclick="this.classList.toggle('flipped')" style="animation-delay: 1.0s;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="chariot-festival.jpg" loading="lazy" alt="Chariot Festival">
+            </div>
+            <div class="flip-card-back">
+              <p>A sweeping vista of the Kallazhagar Chariot Festival, demonstrating the monumental scale of collective
+                devotion in Madurai.</p>
+            </div>
+          </div>
+          <p class="caption">Kallazhagar Festival</p>
+        </div>
+
+        <div class="item reveal flip-card" onclick="this.classList.toggle('flipped')" style="animation-delay: 1.2s;">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="man-by-fire.jpg" loading="lazy" alt="Man by Fire">
+            </div>
+            <div class="flip-card-back">
+              <p>A candid glimpse at Nelpettai, capturing the raw warmth and resilience of daily labor illuminated by
+                open flames.</p>
+            </div>
+          </div>
+          <p class="caption">Nelpettai Warmth</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Journal Section -->
+    <section id="journal" class="section">
+      <div class="section-header reveal">
+        <span class="section-number">III.</span>
+        <h2 class="section-title">The Journal</h2>
+        <p class="journal-intro">A curated archive of field expeditions, cultural encounters, and visual narratives —
+          each chapter a window into a world witnessed through the lens.</p>
+      </div>
+
+      <div class="journal-grid">
+
+        <!-- Dasara -->
+        <div class="journal-card reveal" onclick="openJournal('dasara')" style="animation-delay:0s;">
+          <div class="journal-cover">
+            <img src="Dasara-20260418T161010Z-3-001/Dasara/IMG-20251001-WA0046.jpg" loading="lazy" alt="Dasara">
+            <div class="journal-overlay">
+              <span class="journal-open-hint">View Journal ›</span>
+            </div>
+          </div>
+          <div class="journal-meta">
+            <h3 class="journal-name">Dasara</h3>
+            <p class="journal-desc">A grand visual chronicle of the Dasara celebrations — elephants, processions, and
+              the luminous grandeur of Karnataka's royal festival.</p>
+            <span class="journal-count" id="count-dasara">69 frames</span>
+          </div>
+        </div>
+
+        <!-- July 2025 -->
+        <div class="journal-card reveal" onclick="openJournal('july2025')" style="animation-delay:0.1s;">
+          <div class="journal-cover">
+            <img src="July 2025/1.png" loading="lazy" alt="July 2025">
+            <div class="journal-overlay">
+              <span class="journal-open-hint">View Journal ›</span>
+            </div>
+          </div>
+          <div class="journal-meta">
+            <h3 class="journal-name">Everyday Moments</h3>
+            <p class="journal-desc">Mid-year field notes and candid photography capturing the everyday pulse of life —
+              streets, faces, and fleeting moments suspended in time.</p>
+            <span class="journal-count">24 frames</span>
+          </div>
+        </div>
+
+        <!-- Kodungallur -->
+        <div class="journal-card reveal" onclick="openJournal('kodungallur')" style="animation-delay:0.2s;">
+          <div class="journal-cover">
+            <img src="Kodungallur-20260418T161011Z-3-001/Kodungallur/1_20260418_175911_0000.png" loading="lazy"
+              alt="Kodungallur">
+            <div class="journal-overlay">
+              <span class="journal-open-hint">View Journal ›</span>
+            </div>
+          </div>
+          <div class="journal-meta">
+            <h3 class="journal-name">Kodungallur</h3>
+            <p class="journal-desc">An immersive document of the Kodungallur Bharani — the sacred sickles, chanting
+              devotees, and the electrifying intensity of an ancient ritual.</p>
+            <span class="journal-count">3 frames</span>
+          </div>
+        </div>
+
+        <!-- Thank You -->
+        <div class="journal-card reveal" onclick="openJournal('thankyou')" style="animation-delay:0.3s;">
+          <div class="journal-cover">
+            <img src="THank you/1.png" loading="lazy" alt="Thank You">
+            <div class="journal-overlay">
+              <span class="journal-open-hint">View Journal ›</span>
+            </div>
+          </div>
+          <div class="journal-meta">
+            <h3 class="journal-name">Nelpettai</h3>
+            <p class="journal-desc">A vivid look into the heart of Nelpettai — capturing the raw warmth, resilience, and the spark of traditional ironwork.</p>
+            <span class="journal-count">17 frames</span>
+          </div>
+        </div>
+
+        <!-- Theyyam -->
+        <div class="journal-card reveal" onclick="openJournal('theyyam')" style="animation-delay:0.4s;">
+          <div class="journal-cover">
+            <img src="Theyyam-20260418T161013Z-3-001/Theyyam/DSC01146.png" loading="lazy" alt="Theyyam">
+            <div class="journal-overlay">
+              <span class="journal-open-hint">View Journal ›</span>
+            </div>
+          </div>
+          <div class="journal-meta">
+            <h3 class="journal-name">Theyyam</h3>
+            <p class="journal-desc">High-resolution documentation of the Theyyam ritual — the painted faces, blazing
+              torches, and transcendent energy of Kerala's living deity worship.</p>
+            <span class="journal-count">21 frames</span>
+          </div>
+        </div>
+
+        <!-- Untitled -->
+        <div class="journal-card reveal" onclick="openJournal('untitled')" style="animation-delay:0.5s;">
+          <div class="journal-cover">
+            <img src="Untitled folder-20260418T161018Z-3-001/Untitled folder/1000255950.jpg" loading="lazy"
+              alt="Untitled">
+            <div class="journal-overlay">
+              <span class="journal-open-hint">View Journal ›</span>
+            </div>
+          </div>
+          <div class="journal-meta">
+            <h3 class="journal-name">Sacred Offerings</h3>
+            <p class="journal-desc">Raw, unfiltered frames of ancient sacrifice rituals and village deity worship — documenting moments of intense devotion.</p>
+            <span class="journal-count">12 frames</span>
+          </div>
+        </div>
+
+        <!-- Azhagar Koil -->
+        <div class="journal-card reveal" onclick="openJournal('azhagar')" style="animation-delay:0.6s;">
+          <div class="journal-cover">
+            <img src="azhagar koil-20260417T141902Z-3-001/Thank you_20250811_122711_0000.png" loading="lazy"
+              alt="Azhagar Koil">
+            <div class="journal-overlay">
+              <span class="journal-open-hint">View Journal ›</span>
+            </div>
+          </div>
+          <div class="journal-meta">
+            <h3 class="journal-name">Azhagar Koil</h3>
+            <p class="journal-desc">A pilgrimage in frames — the sacred Azhagar Koil temple, its devotees, and the
+              timeless architecture cradled in the Madurai hills.</p>
+            <span class="journal-count">13 frames</span>
+          </div>
+        </div>
+
+        <!-- சுபம் -->
+        <div class="journal-card reveal" onclick="openJournal('subam')" style="animation-delay:0.7s;">
+          <div class="journal-cover">
+            <img src="சுபம்/1.png" loading="lazy" alt="சுபம்">
+            <div class="journal-overlay">
+              <span class="journal-open-hint">View Journal ›</span>
+            </div>
+          </div>
+          <div class="journal-meta">
+            <h3 class="journal-name">சுபம் (Subam)</h3>
+            <p class="journal-desc">An auspicious collection — joyful, ceremonial, and intimate moments woven into a
+              tapestry of Tamil celebration and cultural identity.</p>
+            <span class="journal-count">13 frames</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Journal Lightbox (Blog Style) ===== -->
+  <div id="journal-lightbox" class="jlb-overlay" role="dialog" aria-modal="true" aria-label="Journal viewer">
+    <button class="jlb-close" id="jlb-close" aria-label="Close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+    </button>
+    <div class="jlb-blog-content" id="jlb-blog-content">
+      <!-- The hero image, title structure, and stacked images will be appended here via JS -->
+    </div>
+  </div>
+
+
+
+
+
+  <footer class="footer">
+    <img src="logo.png" alt="Vasanthraju" class="footer-logo">
+    <div class="footer-links">
+      <a href="https://www.instagram.com/vasanthraju579?utm_source=qr&igsh=MXdjbTBlZ2Vvbmp2eA%3D%3D" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="footer-icon"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> Instagram</a>
+      <a href="tel:+917339536693"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="footer-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Contact</a>
+      <a href="mailto:vasanthraju579@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="footer-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Mail</a>
+    </div>
+    <p class="copyright">&copy; 2026 Vasanthraju. Wonder and Wander.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
