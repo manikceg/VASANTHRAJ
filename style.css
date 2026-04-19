@@ -633,6 +633,14 @@ h1, h2, h3, .logo, .section-number {
   color: #aaa;
 }
 
+.journal-location {
+  font-size: 0.78rem;
+  color: #888;
+  font-style: italic;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
 /* ===== Journal Lightbox ===== */
 .jlb-overlay {
   position: fixed;

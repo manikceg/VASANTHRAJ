@@ -89,8 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     dasara: {
       title: 'Dasara',
       desc: [
-        'Eyes blaze in the dark — fear and devotion collide.',
-        'A moment where mortals meet the mystical.'
+        'A grand visual chronicle of the Dasara celebrations — elephants, processions, and the luminous grandeur of Karnataka\'s royal festival.'
       ],
       images: [
         'Dasara/1_20260419_214054_0000.png',
@@ -130,19 +129,14 @@ document.addEventListener('DOMContentLoaded', () => {
     july2025: {
       title: 'Dhobi Ghat',
       desc: [
-        'A living rhythm of labor — cloth, water, and hands moving in unison.',
-        'Under open skies, stories are beaten, rinsed, and hung to dry.',
-        'Not just a place — Dhobi Ghat is the city\'s raw, breathing backbone.'
+        'Mid-year field notes and candid photography capturing the everyday pulse of life — streets, faces, and fleeting moments suspended in time.'
       ],
       images: Array.from({length: 24}, (_, i) => `July 2025/${i + 1}.png`)
     },
     kodungallurBharani: {
       title: 'Kodungallur Bharani',
       desc: [
-        'When institutional justice failed, Kannagi used her anklet as evidence and her body as the witness stand.',
-        'At Kodungallur, devotees continue that same testimony — blood drawn from the crown, offered not to a deity, but to a verdict that was never fully delivered.',
-        'The anklet broke a king\'s judgment. The blood continues the case.',
-        'This festival is not a ritual — it is an annual hearing where the goddess is still the only judge who listens.'
+        'An immersive document of the Kodungallur Bharani — the sacred sickles, chanting devotees, and the electrifying intensity of an ancient ritual.'
       ],
       images: [
         'Kodungallur Bharani/1_20260419_174759_0000.png',
@@ -169,28 +163,21 @@ document.addEventListener('DOMContentLoaded', () => {
     thankyou: {
       title: 'Nelpettai',
       desc: [
-        'Nelpet Mutton Market in Madurai traces its roots to the late 19th century (around 1880s) during the British Colonial period.',
-        'As Madurai grew into a major trade city, designated meat markets were established by the Municipal Administration.',
-        'Nelpet gradually became one of the city\'s primary centers for mutton trade — a living archive of commerce, community, and daily ritual.'
+        'A vivid look into the heart of Nelpettai — capturing the raw warmth, resilience, and the spark of traditional ironwork.'
       ],
       images: Array.from({length: 17}, (_, i) => `THank you/${i + 1}.png`)
     },
     angarikalin: {
       title: 'Avana Padam',
       desc: [
-        'Love bloomed like a flower between stones, fragile yet defiant.',
-        'Hands meant to nurture became storms that crushed it.',
-        'They called the ruins honor, but the roots still ache beneath the soil —',
-        'whispering a pain that refuses to die.'
+        'The story of embers — a documentary in heat, light, and devotion, capturing the ancient fire rituals that burn across South India.'
       ],
       images: Array.from({length: 10}, (_, i) => `Angarikalin kadhai/${i + 1}_20260419_133145_000${i}.png`)
     },
     theyyam1: {
       title: 'Theyyam',
       desc: [
-        'Capturing the Divine — Kerala\'s sacred ritual art.',
-        'My portfolio documents the raw energy, intricate costumes, and spiritual essence of these divine performances.',
-        'Each photograph freezes a moment where mortal dancers become gods, revealing the deep cultural roots and hypnotic beauty of this ancient tradition.'
+        'The painted faces, blazing torches, and transcendent energy of Kerala\'s living deity worship — Theyyam dissolves the line between man and god.'
       ],
       images: [
         'Theyyam 1/1_20260419_005909_0000.png',
@@ -217,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     azhagar: {
       title: 'Azhagar Koil',
       desc: [
-        'Azhagar Koil Chariot Festival — Madurai.'
+        'A pilgrimage in frames — the sacred Azhagar Koil temple, its devotees, and the timeless architecture cradled in the Madurai hills.'
       ],
       images: [
         'azhagar koil-20260417T141902Z-3-001/Thank you_20250811_122711_0000.png',
@@ -257,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'சுபம் (Subam)',
       desc: [
         'An auspicious collection — joyful, ceremonial, and intimate moments woven into a tapestry of Tamil celebration and cultural identity.',
-        'Madurai.'
+        '📍 Madurai'
       ],
       images: Array.from({length: 13}, (_, i) => `சுபம்/${i + 1}.png`)
     }
