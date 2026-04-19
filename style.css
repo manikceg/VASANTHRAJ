@@ -341,13 +341,13 @@ h1, h2, h3, .logo, .section-number {
 
 /* Base Sections */
 .section {
-  padding: 10rem 5%;
+  padding: 4rem 5%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .section-header {
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
@@ -821,7 +821,7 @@ h1, h2, h3, .logo, .section-number {
   }
   
   .section {
-    padding: 6rem 5%;
+    padding: 3rem 5%;
   }
   
   .hero {
@@ -842,14 +842,14 @@ h1, h2, h3, .logo, .section-number {
 
 .about-inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 6rem;
   max-width: 1300px;
   margin: 0 auto;
 }
 
 .about-logo-wrap {
-  flex: 0 0 400px;
+  flex: 0 0 520px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -857,19 +857,38 @@ h1, h2, h3, .logo, .section-number {
 
 .about-logo {
   width: 100%;
-  max-width: 400px;
+  max-width: 520px;
   height: auto;
   object-fit: contain;
-  border-radius: 4px;
+  border-radius: 2px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
 }
 
-.about-text { flex: 1; }
+.about-text {
+  flex: 1;
+  padding-top: 1rem;
+}
+
+.about-text .section-title {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
 
 .about-para {
-  font-size: 1.25rem;
-  line-height: 2;
-  color: var(--text-secondary);
-  margin-bottom: 1.8rem;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.95;
+  color: #444;
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.01em;
 }
 
 .about-para strong {
@@ -879,10 +898,14 @@ h1, h2, h3, .logo, .section-number {
 
 .about-tagline {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-style: italic;
+  font-weight: 400;
   color: var(--text-color);
   margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  letter-spacing: 0.02em;
 }
 
 /* ===== Blog Section ===== */

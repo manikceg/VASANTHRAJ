@@ -88,82 +88,62 @@ document.addEventListener('DOMContentLoaded', () => {
   const JOURNALS = {
     dasara: {
       title: 'Dasara',
-      desc: 'A grand visual chronicle of the Dasara celebrations — elephants, processions, and the luminous grandeur of Karnataka\'s royal festival.',
+      desc: [
+        'Eyes blaze in the dark — fear and devotion collide.',
+        'A moment where mortals meet the mystical.'
+      ],
       images: [
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG-20251001-WA0046.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG-20251001-WA0048.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_0021.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_0054.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1493.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1497.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1499.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1557.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1587.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1606.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1612 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1614.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1618.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1625.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1628.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1630.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1636.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1637.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1639.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1644.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1645.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1652.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1665.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1805.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_1958.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_20241025_101619_817 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_2180.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9136.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9254 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9288 (1) (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9289 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9293 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9295 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9296 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9297 (1) (1)(1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9302 (1) (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9312 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9356 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9356.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9360 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9364 (2).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9370.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9385.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9389 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9399 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9399.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9409 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9412.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9414.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9417 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9419.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9422 (2).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9432.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9436 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9467 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9520.jpeg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9521.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9533.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9630 (1).jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9711.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9715.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9838.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/IMG_9856.jpg',
-        'Dasara-20260418T161010Z-3-001/Dasara/Shared from Lightroom mobile.jpg'
+        'Dasara/1_20260419_214054_0000.png',
+        'Dasara/2_20260419_214054_0001.png',
+        'Dasara/3_20260419_214054_0002.png',
+        'Dasara/4_20260419_214054_0003.png',
+        'Dasara/5_20260419_214055_0004.png',
+        'Dasara/6_20260419_214055_0005.png',
+        'Dasara/7_20260419_214055_0006.png',
+        'Dasara/8_20260419_214055_0007.png',
+        'Dasara/9_20260419_214055_0008.png',
+        'Dasara/10_20260419_214055_0009.png',
+        'Dasara/11_20260419_214055_0010.png',
+        'Dasara/12_20260419_214055_0011.png',
+        'Dasara/13_20260419_214055_0012.png',
+        'Dasara/14_20260419_214055_0013.png',
+        'Dasara/15_20260419_214055_0014.png',
+        'Dasara/16_20260419_214055_0015.png',
+        'Dasara/17_20260419_214055_0016.png',
+        'Dasara/18_20260419_214055_0017.png',
+        'Dasara/19_20260419_214055_0018.png',
+        'Dasara/20_20260419_214055_0019.png',
+        'Dasara/21_20260419_214055_0020.png',
+        'Dasara/22_20260419_214055_0021.png',
+        'Dasara/23_20260419_214055_0022.png',
+        'Dasara/24_20260419_214056_0023.png',
+        'Dasara/25_20260419_214056_0024.png',
+        'Dasara/26_20260419_214056_0025.png',
+        'Dasara/27_20260419_214056_0026.png',
+        'Dasara/28_20260419_214056_0027.png',
+        'Dasara/29_20260419_214056_0028.png',
+        'Dasara/30_20260419_214056_0029.png',
+        'Dasara/31_20260419_214056_0030.png',
+        'Dasara/32_20260419_214056_0031.png'
       ]
     },
     july2025: {
-      title: 'Everyday Moments',
-      desc: 'Mid-year field notes and candid photography capturing the everyday pulse of life — streets, faces, and fleeting moments suspended in time.',
+      title: 'Dhobi Ghat',
+      desc: [
+        'A living rhythm of labor — cloth, water, and hands moving in unison.',
+        'Under open skies, stories are beaten, rinsed, and hung to dry.',
+        'Not just a place — Dhobi Ghat is the city\'s raw, breathing backbone.'
+      ],
       images: Array.from({length: 24}, (_, i) => `July 2025/${i + 1}.png`)
     },
     kodungallurBharani: {
       title: 'Kodungallur Bharani',
-      desc: 'An immersive document of the Kodungallur Bharani — the sacred sickles, chanting devotees, and the electrifying intensity of an ancient ritual.',
+      desc: [
+        'When institutional justice failed, Kannagi used her anklet as evidence and her body as the witness stand.',
+        'At Kodungallur, devotees continue that same testimony — blood drawn from the crown, offered not to a deity, but to a verdict that was never fully delivered.',
+        'The anklet broke a king\'s judgment. The blood continues the case.',
+        'This festival is not a ritual — it is an annual hearing where the goddess is still the only judge who listens.'
+      ],
       images: [
         'Kodungallur Bharani/1_20260419_174759_0000.png',
         'Kodungallur Bharani/2_20260419_174800_0001.png',
@@ -188,17 +168,30 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     thankyou: {
       title: 'Nelpettai',
-      desc: 'A vivid look into the heart of Nelpettai — capturing the raw warmth, resilience, and the spark of traditional ironwork.',
+      desc: [
+        'Nelpet Mutton Market in Madurai traces its roots to the late 19th century (around 1880s) during the British Colonial period.',
+        'As Madurai grew into a major trade city, designated meat markets were established by the Municipal Administration.',
+        'Nelpet gradually became one of the city\'s primary centers for mutton trade — a living archive of commerce, community, and daily ritual.'
+      ],
       images: Array.from({length: 17}, (_, i) => `THank you/${i + 1}.png`)
     },
     angarikalin: {
-      title: 'Angarikalin Kadhai',
-      desc: 'The story of embers — a documentary in heat, light, and devotion, capturing the ancient fire rituals that burn across South India.',
+      title: 'Avana Padam',
+      desc: [
+        'Love bloomed like a flower between stones, fragile yet defiant.',
+        'Hands meant to nurture became storms that crushed it.',
+        'They called the ruins honor, but the roots still ache beneath the soil —',
+        'whispering a pain that refuses to die.'
+      ],
       images: Array.from({length: 10}, (_, i) => `Angarikalin kadhai/${i + 1}_20260419_133145_000${i}.png`)
     },
     theyyam1: {
       title: 'Theyyam',
-      desc: 'The painted faces, blazing torches, and transcendent energy of Kerala\'s living deity worship — Theyyam dissolves the line between man and god.',
+      desc: [
+        'Capturing the Divine — Kerala\'s sacred ritual art.',
+        'My portfolio documents the raw energy, intricate costumes, and spiritual essence of these divine performances.',
+        'Each photograph freezes a moment where mortal dancers become gods, revealing the deep cultural roots and hypnotic beauty of this ancient tradition.'
+      ],
       images: [
         'Theyyam 1/1_20260419_005909_0000.png',
         'Theyyam 1/2_20260419_005909_0001.png',
@@ -223,7 +216,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     azhagar: {
       title: 'Azhagar Koil',
-      desc: 'A pilgrimage in frames — the sacred Azhagar Koil temple, its devotees, and the timeless architecture cradled in the Madurai hills.',
+      desc: [
+        'Azhagar Koil Chariot Festival — Madurai.'
+      ],
       images: [
         'azhagar koil-20260417T141902Z-3-001/Thank you_20250811_122711_0000.png',
         'azhagar koil-20260417T141902Z-3-001/Thank you_20250811_122711_0001.png',
@@ -260,7 +255,10 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     subam: {
       title: 'சுபம் (Subam)',
-      desc: 'An auspicious collection — joyful, ceremonial, and intimate moments woven into a tapestry of Tamil celebration and cultural identity.',
+      desc: [
+        'An auspicious collection — joyful, ceremonial, and intimate moments woven into a tapestry of Tamil celebration and cultural identity.',
+        'Madurai.'
+      ],
       images: Array.from({length: 13}, (_, i) => `சுபம்/${i + 1}.png`)
     }
   };
@@ -290,13 +288,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const title = document.createElement('h2');
     title.className = 'jlb-title';
     title.textContent = journal.title;
-    
-    const desc = document.createElement('p');
-    desc.className = 'jlb-desc';
-    desc.textContent = journal.desc;
-    
     textBlock.appendChild(title);
-    textBlock.appendChild(desc);
+
+    // Support single string or array of paragraphs
+    const descArr = Array.isArray(journal.desc) ? journal.desc : [journal.desc];
+    descArr.forEach(paraText => {
+      const para = document.createElement('p');
+      para.className = 'jlb-desc';
+      para.textContent = paraText;
+      textBlock.appendChild(para);
+    });
+
     blogContent.appendChild(textBlock);
 
     // 3. Grid for the remainder of images
