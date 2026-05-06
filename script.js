@@ -338,79 +338,66 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeJournal();
   });
 
-  // ===== On-Demand Watermarking (Zero Load Overhead) =====
-  
-  // 1. Prevent drag-and-drop saving of raw images to desktop
+  // ===== Image Download Protection =====
+
+  // 1. Prevent drag-and-drop saving
   document.addEventListener('dragstart', (e) => {
     if (e.target.tagName === 'IMG') {
       e.preventDefault();
     }
   });
 
-  // 2. Intercept Right-Click / Long-Press and serve custom watermarked download
+  // 2. Block right-click on images completely
   document.addEventListener('contextmenu', (e) => {
     if (e.target.tagName === 'IMG') {
-      // Allow right clicks on UI elements like the top-left Logo
       if (e.target.closest('.logo')) return;
-
-      e.preventDefault(); // Block native "Save Image As"
-      
-      const img = e.target;
-      try {
-        if (!img.naturalWidth) return;
-        
-        let targetWidth = img.naturalWidth;
-        let targetHeight = img.naturalHeight;
-        
-        // Since we are only processing 1 image deeply, we can allow high-res (up to 2400px)
-        const maxRes = 2400;
-        if (targetWidth > maxRes) {
-          const ratio = maxRes / targetWidth;
-          targetWidth = maxRes;
-          targetHeight = targetHeight * ratio;
-        }
-
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
-        
-        canvas.width = targetWidth;
-        canvas.height = targetHeight;
-        
-        ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
-        
-        ctx.font = `bold ${Math.max(16, targetWidth * 0.025)}px "Inter", sans-serif`;
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-        ctx.textAlign = 'right';
-        ctx.textBaseline = 'bottom';
-        
-        ctx.shadowColor = 'rgba(0, 0, 0, 0.9)';
-        ctx.shadowBlur = 8;
-        ctx.shadowOffsetX = 2;
-        ctx.shadowOffsetY = 2;
-        
-        const padding = Math.max(15, targetWidth * 0.02);
-        ctx.fillText("© VASANTHRAJU", targetWidth - padding, targetHeight - padding);
-        
-        canvas.toBlob((blob) => {
-          if (!blob) return;
-          const blobUrl = URL.createObjectURL(blob);
-          
-          // Force a programmatic download of the watermarked file
-          const link = document.createElement('a');
-          link.href = blobUrl;
-          link.download = `VasanthRaju_Photography_${Date.now()}.jpg`;
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-          
-          setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
-        }, 'image/jpeg', 0.90);
-        
-      } catch(err) {
-        console.error("Watermark generation failed", err);
-      }
+      e.preventDefault();
     }
   });
+
+  // 3. Block keyboard shortcuts for saving
+  document.addEventListener('keydown', (e) => {
+    // Block Ctrl+S / Cmd+S
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+      e.preventDefault();
+    }
+    // Block Ctrl+Shift+I / Cmd+Option+I (DevTools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I') {
+      e.preventDefault();
+    }
+    // Block F12
+    if (e.key === 'F12') {
+      e.preventDefault();
+    }
+  });
+
+  // 4. Prevent long-press save on mobile
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('touchstart', (e) => {
+      if (e.touches.length > 1) e.preventDefault();
+    }, { passive: false });
+  });
+
+  // Also apply to dynamically created images
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      mutation.addedNodes.forEach((node) => {
+        if (node.tagName === 'IMG') {
+          node.addEventListener('touchstart', (e) => {
+            if (e.touches.length > 1) e.preventDefault();
+          }, { passive: false });
+        }
+        if (node.querySelectorAll) {
+          node.querySelectorAll('img').forEach(img => {
+            img.addEventListener('touchstart', (e) => {
+              if (e.touches.length > 1) e.preventDefault();
+            }, { passive: false });
+          });
+        }
+      });
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
 
 });
 

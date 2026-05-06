@@ -1,0 +1,19 @@
+# Prevent image caching abuse and direct hotlinking
+/*.jpg
+  Content-Disposition: inline
+  X-Content-Type-Options: nosniff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpeg
+  Content-Disposition: inline
+  X-Content-Type-Options: nosniff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Content-Disposition: inline
+  X-Content-Type-Options: nosniff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
